@@ -49,24 +49,25 @@ The two dimensions of looping that will be performed are: <br>
 * Looping through the sheets (using a For Each structure)
 * looping through the datasheet on each sheet (using For / Next or While / Wend structure)
 
-#### Step 5
+#### Step 5 - Begin Processing each sheet
 
-For each sheet in the workbook we will: <br>
+For each sheet in the workbook: <br>
   * Sort the dataset in ascending order by date to ensure the data is organized
   * using a for loop start moving down row by row until you get to a cell where the value in the A column **does not match** the value currently assigned to the ticker variable. i.e. This means we have gone past the last row matching the current ticker
+  * While we are looping, kep adding the value in the Total Stock Volume column to current *Total Stock Volume* variable
 
-#### Step 6
+#### Step 6 - Set the values for First Open Day and Last Open Day for the current ticker
 
 Assign the value  the Last Close Day column to the variable created for *Last Close Day* <br>
 Assign the value from the First Open Day column to the variable created for *First Open Day*
 
 
-#### Step 7
+#### Step 7 - Populate Summary Table
 
 Use the ticker, Last Close Day and First Day Open, Total Stock Volumes variables to populate the values in a summary table in columns *I, J and K*.
 
 
-#### Step 8
+#### Step 8 - Manipulate Summary table to find the Largest Percentage Increase / Decrease 
 
 Find the last row in the summary data section and define a range for the data summary table
 
