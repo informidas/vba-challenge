@@ -67,12 +67,15 @@ Assign the value from the First Open Day column to the variable created for *Fir
 Use the ticker, Last Close Day and First Day Open, Total Stock Volumes variables to populate the values in a summary table in columns *I, J and K*.
 
 
-#### Step 8 - Manipulate Summary table to find the Largest Percentage Increase / Decrease 
+#### Step 8 - Define a range for the Summary Table 
 
-Find the last row in the summary data section and define a range for the data summary table
+* Find the last row in the summary data section
+* Use the last row to define a range for the data summary table
+* Sort the *Percentage Changed* column in **Descending** order to get the *Largest Percentage Increase* metric 
+* Sort the *Percentage Changed* column in **Ascending** order to get the *Largest Percentage Decrease* metric 
+* Sort the *Total Stock Volume* column in **Descending** order to get the *Highest Total Stock Volume* metric 
 
-
-#### Step 9  - Populate the Greatest Increases and decreases
+#### Step 9  - Manipulate Summary table to find the Largest Percentage Increase / Decrease
 
 * Set the values for the ticker showing the greatest percentage increase
 
