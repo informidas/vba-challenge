@@ -13,12 +13,6 @@ Sub TickerYTDChange()
             
     Dim lastCol As Double
     Dim lastRow As Double
-    Dim firstDayOpen As Single
-    Dim lastDayClose As Single
-    Dim totalStockVolume As Double
-    Dim ticker As String
-    Dim r As Double
-    Dim i As Integer
     Dim f As Integer
     Dim rngSummaryTbl As Range
     Dim ProcessedList As String
@@ -41,10 +35,10 @@ Sub TickerYTDChange()
          lastRow = sht.Range("A" & Rows.Count).End(xlUp).Row
          lastCol = sht.Cells(1, Columns.Count).End(xlToLeft).Column
           
-        'sort the data just to be sure we have ticker and dates in the right order
+        'run procedure to sort the data, just to be sure we have ticker and dates in the right order
         SortData sht, Range(Cells(1, 1), Cells(lastRow, lastCol))
         
-        'Now Find the Biggest Percentage Increase and Decrease
+        'Run procedure to find the Biggest Percentage Increase and Decrease
         FindFirstLastDayPricing sht
          
     
