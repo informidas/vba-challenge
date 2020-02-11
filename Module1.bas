@@ -111,8 +111,20 @@ End Sub
 
 
 Sub SortData(Optional ws As Variant, Optional rngSort As Range)
-Dim lastCol As Long
-Dim lastRow As Long
+
+'   Created By: Karl Ramsay
+'   Created:    Feb. 8th, 2020
+'   Modified:   Feb. 10th, 2020
+'   Modified:
+'   Description: The purpose of this code is to sort a defined dataset
+'   It optionally take two arguments of a worksheet and a sort range.
+'   If no arguments are passed in, the activesheet is used and teh dataset on the activesheet used as the range
+'   Currently, the code will perform a sort of the data in ascending order.
+'   A possible modification is to add a third optional argument for sort order to make it more flexible (i.e. Ascending or Descending)
+
+
+    Dim lastCol As Long
+    Dim lastRow As Long
 
 
     'Test to see if an optional worksheet reference was passed in
@@ -146,18 +158,28 @@ End Sub
 
 Sub AnalyzeChange(YrlyChange As Range)
 
-If YrlyChange.Value > o Then
+'   Created By: Karl Ramsay
+'   Created:    Feb. 8th, 2020
+'   Modified:   Feb. 10th, 2020
+'   Modified:
+'   Description: The purpose of this code is to determine if the Percentage Change meets the criteria for shading
+'   the Percentage Change for each ticker based on the range the value falls in (i.e. red for negative, and green for positive
 
-    YrlyChange.Interior.ColorIndex = 4
-    
-    
-ElseIf YrlyChange.Value < 0 Then
 
-    YrlyChange.Interior.ColorIndex = 3
 
-Else
+
+    If YrlyChange.Value > 0 Then
     
-End If
+        YrlyChange.Interior.ColorIndex = 4
+        
+        
+    ElseIf YrlyChange.Value < 0 Then
+    
+        YrlyChange.Interior.ColorIndex = 3
+    
+    Else
+        
+    End If
     
 
 End Sub
